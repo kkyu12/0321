@@ -19,9 +19,9 @@ int main()
 	
 	for (int i=0;i<studentCount;i++){
 			printf("koposw%d 학생의 점수 %d개를 차례대로 입력하세요.",i+1,subjectCount);
-		for (int j=0;j<subjectCount;j++){
-			scanf("%d",&score[j][i]);
-		}
+			for (int j=0;j<subjectCount;j++){
+				scanf("%d",&score[j][i]);
+			}
 	}
 	//학생번호 별 과목 총점과 평균 
 	for (int i=0;i<studentCount;i++){
@@ -31,7 +31,7 @@ int main()
 		ave[i]=sum[i]/float(subjectCount);
 		printf("koposw%d 학생의 과목 총점은 %d, 평균은 %.2f 입니다.\n",i+1,sum[i],ave[i]);
 	}
-	
+	//과목번호 별 학생 총점과 평균 
 	for (int j=0;j<subjectCount;j++){
 		for (int i=0;i<studentCount;i++){
 		total[j]=total[j]+score[j][i];
